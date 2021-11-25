@@ -54,12 +54,12 @@ if (!mapboxgl.supported()) {
 
     map.on("load", function () {
         map.addLayer({
-            id: "lv2",
+            id: "lv33",
             type: "fill-extrusion",
             source: {
                 type: "geojson",
                 data:
-                    "D:\citystructure\3dbuilding"
+                    "https://data.sfgov.org/resource/ynuv-fyni.geojson"
             },
             paint: {
                 // Get fill-extrusion-height from the source 'height' property.
@@ -71,7 +71,7 @@ if (!mapboxgl.supported()) {
                     0,
                     15.05,
                     10
-                    // ['get', 'hgt_median_m']
+                     ['get','hgt_median_m']
                 ],
 
                 // Get fill-extrusion-base from the source 'base_height' property.
@@ -82,8 +82,8 @@ if (!mapboxgl.supported()) {
                     15,
                     0,
                     15.05,
-                    4
-                    // ['get', 'gnd_min_m']
+                    
+                     ['get', 'gnd_min_m']
                 ],
 
                 // Make extrusions slightly opaque for see through indoor walls.
